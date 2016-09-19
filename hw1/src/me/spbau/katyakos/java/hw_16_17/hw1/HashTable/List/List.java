@@ -49,7 +49,7 @@ public class List {
             }
             temp = temp.next;
         }
-        if (nodeLength != 0 & key.equals(temp.next.getKey())) {
+        if (nodeLength != 0 && key.equals(temp.next.getKey())) {
             String oldValue = temp.next.getValue();
             temp.next = null;
             nodeLength--;
