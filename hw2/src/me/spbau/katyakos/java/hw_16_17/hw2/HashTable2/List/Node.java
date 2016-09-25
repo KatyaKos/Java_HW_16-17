@@ -6,32 +6,57 @@ package me.spbau.katyakos.java.hw_16_17.hw2.HashTable2.List;
  */
 public class Node {
     private Pair element;     //element.first == key, element.second == value
-    protected Node next;
+    private Node next;
 
     Node() {
         element = new Pair();
         next = null;
     }
+
     Node(String key, String value) {
         element = new Pair(key, value);
         next = null;
     }
+
+    /**
+     * Returns the key.
+     */
     public String getKey() {
         return element.getFirst();
     }
+
+    /**
+     * Sets the key.
+     */
     public void setKey(String key) {
         element.setFirst(key);
     }
+
+    /**
+     * Returns the value.
+     */
     public String getValue() {
         return element.getSecond();
     }
+
+    /**
+     * Sets the value.
+     */
     public void setValue(String value) {
         element.setSecond(value);
     }
+
+    /**
+     * Returns the next element.
+     */
     public Node getNext() {
         return next;
     }
-    public void setNext(Node nxt) {
-        next = nxt;
+
+    /**
+     * Sets the next element.
+     */
+    public void setNext(Node next) {
+        this.next = next;
     }
 }

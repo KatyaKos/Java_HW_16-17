@@ -14,15 +14,15 @@ public class ListTest {
     }
 
     @org.junit.Test
-    public void append() throws Exception {
-        assertEquals(null, list.append("Hail", "Fassbender"));
-        assertEquals(null, list.append("Ron Weasley", "Our King"));
+    public void appendTest() throws Exception {
+        assertNull(list.append("Hail", "Fassbender"));
+        assertNull(list.append("Ron Weasley", "Our King"));
         assertEquals("Fassbender", list.append("Hail", "Macbeth"));
         assertEquals("Macbeth", list.append("Hail", "Daleks"));
     }
 
     @org.junit.Test
-    public void delete() throws Exception {
+    public void deleteTest() throws Exception {
         assertEquals(null, list.delete("Hail"));
         list.append("Hail", "Fassbender");
         list.append("Ron Weasley", "Our King");
@@ -33,19 +33,19 @@ public class ListTest {
     }
 
     @org.junit.Test
-    public void find() throws Exception {
-        assertEquals(null, list.find("Hail"));
+    public void findTest() throws Exception {
+        assertNull(list.find("Hail"));
         list.append("Hail", "Fassbender");
         assertEquals("Fassbender", list.find("Hail"));
         list.delete("Hail");
-        assertEquals(null, list.find("Hail"));
+        assertNull(list.find("Hail"));
         list.append("Ron Weasley", "Our King");
-        assertEquals(null, list.find("Run Weasley"));
+        assertNull(list.find("Run Weasley"));
         assertEquals("Our King", list.find("Ron Weasley"));
         list.append("Hail", "Macbeth");
         assertEquals("Macbeth", list.find("Hail"));
         list.delete("Run Weasley");
-        assertEquals(null, list.find("Run Weasley"));
+        assertNull(list.find("Run Weasley"));
     }
 
 }

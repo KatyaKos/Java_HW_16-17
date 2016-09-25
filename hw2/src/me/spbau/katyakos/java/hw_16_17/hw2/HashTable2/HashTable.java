@@ -5,6 +5,7 @@ import me.spbau.katyakos.java.hw_16_17.hw2.HashTable2.List.List;
 /**
  * Created by KatyaKos on 19.09.2016.
  * @author KatyaKos
+ * Hash Table. Method - separate chaining with linked lists. Keys and values are Strings.
  */
 public class HashTable {
     private int keyNumber;
@@ -13,11 +14,7 @@ public class HashTable {
     private List[] list;
 
     public HashTable() {
-        keyNumber = 0;
-        list = new List[module];
-        for (int i = 0; i < module; i++){
-            list[i] = new List();
-        }
+        clear();
     }
 
     /**
@@ -35,26 +32,25 @@ public class HashTable {
     }
 
     /**
-     * @return number of keys in HashTable
+     * Returns number of keys in HashTable
      */
     public int size() {
         return keyNumber;
     }
 
     /**
+     * Tells if HashTable contains a key.
      * @param key - key of the element
      * @return true if HashTable contains such key and false otherwise
      */
     public boolean contains(String key) {
         int hash = getHash(key);
         String found = list[hash].find(key);
-        if (null != found) {
-            return true;
-        }
-        return false;
+        return null != found;
     }
 
     /**
+     * Tells th value of an element.
      * @param key - key of the element
      * @return value of the element with such key (null if it does not exist)
      */
@@ -97,7 +93,7 @@ public class HashTable {
     /**
      * Clears the whole HashTable.
      */
-    public void clear() {
+    public final void clear() {
         keyNumber = 0;
         list = new List[module];
         for (int i = 0; i < module; i++){

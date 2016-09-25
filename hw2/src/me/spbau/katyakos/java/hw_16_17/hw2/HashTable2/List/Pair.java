@@ -17,19 +17,24 @@ public class Pair {
         first = el1;
         second = el2;
     }
+
     public void setPair(String el1, String el2) {
         first = el1;
         second = el2;
     }
+
     public void setFirst(String el) {
         first = el;
     }
+
     public void setSecond(String el) {
         second = el;
     }
+
     public String getFirst() {
         return first;
     }
+
     public String getSecond() {
         return second;
     }
