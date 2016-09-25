@@ -12,11 +12,7 @@ public class HashTable {
     private List[] list;
 
     public HashTable() {
-        keyNumber = 0;
-        list = new List[module];
-        for (int i = 0; i < module; i++){
-            list[i] = new List();
-        }
+        clear();
     }
 
     private int getHash(String key) {
@@ -31,18 +27,18 @@ public class HashTable {
     public int size() {
         return keyNumber;
     }
+
     public boolean contains(String key) {
         int hash = getHash(key);
         String found = list[hash].find(key);
-        if (null != found) {
-            return true;
-        }
-        return false;
+        return null != found;
     }
+
     public String get(String key) {
         int hash = getHash(key);
         return list[hash].find(key);
     }
+
     public String put(String key, String value) {
         int hash = getHash(key);
         String found = list[hash].append(key, value);
@@ -52,6 +48,7 @@ public class HashTable {
         keyNumber++;
         return null;
     }
+
     public String remove(String key) {
         int hash = getHash(key);
         String found = list[hash].delete(key);
@@ -61,7 +58,8 @@ public class HashTable {
         }
         return null;
     }
-    public void clear() {
+
+    public final void clear() {
         keyNumber = 0;
         list = new List[module];
         for (int i = 0; i < module; i++){

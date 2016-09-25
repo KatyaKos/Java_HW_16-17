@@ -24,3 +24,19 @@ public class Main {
         System.out.println(myTable.get("hey"));
     }
 }
+
+/**
+ * null
+ * you
+ * null
+ * null
+ * me
+ * 3
+ * you
+ * 2
+ * me
+ * you
+ * null
+ * 0
+ * null
+ */
