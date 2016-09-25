@@ -30,7 +30,7 @@ public class MatrixTest {
     }
 
     @Test
-    public void spiral() throws Exception {
+    public void spiralTest() throws Exception {
         int[] correct5 = {10, 11, 15, 14, 13, 9, 5, 6, 7, 8, 12, 16, 20, 19, 18, 17, 4, 2, 6, 3, 5, 1, 2, 3, 4};
         assertArrayEquals(correct5, matrix.spiral());
 
@@ -44,7 +44,7 @@ public class MatrixTest {
     }
 
     @Test
-    public void sort() throws Exception {
+    public void sortTest() throws Exception {
         int[][] correct5 = {{2, 3, 4, 5, 6}, {13, 5, 17, 1, 9}, {14, 6, 18, 2, 10}, {15, 7, 19, 3, 11}, {16, 8, 20, 4, 12}};
         matrix.sort();
         assertArrayEquals(correct5, matrix.getMatrix());
