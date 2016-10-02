@@ -1,6 +1,3 @@
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-
 /**
  * Created by KatyaKos on 26.09.2016.
  * @author KatyaKos

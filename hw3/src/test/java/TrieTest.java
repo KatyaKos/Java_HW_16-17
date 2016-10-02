@@ -1,8 +1,6 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
@@ -12,7 +10,7 @@ import static org.junit.Assert.*;
  * Created by KatyaKos on 28.09.2016.
  */
 public class TrieTest {
-    Trie trie;
+    private Trie trie;
 
     @Before
     public void setUp() throws Exception {

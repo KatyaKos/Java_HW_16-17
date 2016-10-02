@@ -8,8 +8,8 @@ import java.io.*;
  */
 public class Vertex implements Serializable {
     private final static int ALPHABET = 95; //from 32 to 126
-    Vertex[] next;
-    Vertex previous;
+    private Vertex[] next;
+    private Vertex previous;
     private int terminalSize;
     private int childrenSize;
     private int subTrieSize;

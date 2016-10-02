@@ -6,7 +6,7 @@ import java.io.*;
  * Trie class for strings using alphabet that consists of ascii symbols [32, 126].
  */
 public class Trie implements IOStreamSerializable {
-    Vertex root;
+    private Vertex root;
 
     public Trie() {
         root = new Vertex();
