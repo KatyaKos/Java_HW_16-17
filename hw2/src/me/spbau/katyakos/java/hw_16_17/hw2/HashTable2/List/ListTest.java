@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
  * Created by KatyaKos on 19.09.2016.
  */
 public class ListTest {
-    List list;
+    private List list;
 
     @org.junit.Before
     public void prepare() throws Exception {

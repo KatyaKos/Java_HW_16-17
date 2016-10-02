@@ -19,7 +19,7 @@ public class HashTable {
 
     /**
      * Counts the polynomial hash of the key that is String.
-     * @param key - key of the element
+     * @param key key of the element
      * @return hash of the key
      */
     private int getHash(String key) {
@@ -40,7 +40,7 @@ public class HashTable {
 
     /**
      * Tells if HashTable contains a key.
-     * @param key - key of the element
+     * @param key key of the element
      * @return true if HashTable contains such key and false otherwise
      */
     public boolean contains(String key) {
@@ -50,8 +50,8 @@ public class HashTable {
     }
 
     /**
-     * Tells th value of an element.
-     * @param key - key of the element
+     * Tells the value of an element.
+     * @param key key of the element
      * @return value of the element with such key (null if it does not exist)
      */
     public String get(String key) {
@@ -61,8 +61,8 @@ public class HashTable {
 
     /**
      * Adds an element to HashTable. Changes the value if such key already exists.
-     * @param key - key of the element
-     * @param value - value of the element
+     * @param key key of the element
+     * @param value value of the element
      * @return old value if the element with such key already exists and null otherwise
      */
     public String put(String key, String value) {
@@ -77,7 +77,7 @@ public class HashTable {
 
     /**
      * Removes an element from the HashTable.
-     * @param key - key of the element
+     * @param key key of the element
      * @return old value if the element with such key already exists and null otherwise
      */
     public String remove(String key) {

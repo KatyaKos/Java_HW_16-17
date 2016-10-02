@@ -16,8 +16,8 @@ public class List {
 
     /**
      * Adds an element to List. Changes the value if such key already exists.
-     * @param key - key of the element
-     * @param value - value of the element
+     * @param key key of the element
+     * @param value value of the element
      * @return old value if the element with such key already exists and null otherwise
      */
     public String append(String key, String value) {
@@ -37,7 +37,7 @@ public class List {
 
     /**
      * Finds an element in the List.
-     * @param key - key of the element
+     * @param key key of the element
      * @return value if the element with such key already exists and null otherwise
      */
     public String find(String key) {
@@ -53,7 +53,7 @@ public class List {
 
     /**
      * Removes an element from the List.
-     * @param key - key of the element
+     * @param key key of the element
      * @return old value if the element with such key already exists and null otherwise
      */
     public String delete(String key) {

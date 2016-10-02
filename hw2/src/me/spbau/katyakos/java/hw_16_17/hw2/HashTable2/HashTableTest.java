@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  * Created by KatyaKos on 19.09.2016.
  */
 public class HashTableTest {
-    HashTable hashTable;
+    private HashTable hashTable;
     @Before
     public void prepare() throws Exception {
         hashTable = new HashTable();
