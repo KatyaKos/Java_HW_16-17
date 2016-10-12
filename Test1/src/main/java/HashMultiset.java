@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class HashMultiset<E> extends HashSet<E> implements Multiset<E> {
     private int size;
-    private LinkedHashMap<E, Integer> mapOfElements;
+    LinkedHashMap<E, Integer> mapOfElements;
     private HashSet<E> distinctElements;
     private LinkedHashSet<Multiset.Entry<E>> entries;
 
@@ -42,7 +42,7 @@ public class HashMultiset<E> extends HashSet<E> implements Multiset<E> {
             entries.add(new Entry(e, 1));
             return true;
         }
-        mapOfElements.remove(e);
+        //mapOfElements.remove(e);
         mapOfElements.put(e, number + 1);
         entries.remove(new Entry(e, number));
         entries.add(new Entry(e, number + 1));
@@ -61,7 +61,7 @@ public class HashMultiset<E> extends HashSet<E> implements Multiset<E> {
             distinctElements.remove(o);
             entries.remove(new Entry(e, 1));
         } else {
-            mapOfElements.remove(o);
+            //mapOfElements.remove(o);
             mapOfElements.put(e, number - 1);
             entries.remove(new Entry(e, number));
             entries.add(new Entry(e, number - 1));
@@ -91,7 +91,7 @@ public class HashMultiset<E> extends HashSet<E> implements Multiset<E> {
 
     @Override
     public Iterator<E> iterator() {
-        return null;
+        return new ThisIterator();
     }
 
     @Override
@@ -137,7 +137,6 @@ public class HashMultiset<E> extends HashSet<E> implements Multiset<E> {
 
         public ThisIterator() {
             iterator = entries.iterator();
-            leftElement = null;
         }
 
         @Override
