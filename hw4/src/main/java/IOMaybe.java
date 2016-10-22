@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 /**
  * Created by KatyaKos on 09.10.2016.
+ * This class can read  from file, square integers and write the result to another file (all not-integers turn into 'Nothing').
  */
 public class IOMaybe {
     private ArrayList<Maybe<Integer>> data;
@@ -14,6 +15,9 @@ public class IOMaybe {
         data = new ArrayList<Maybe<Integer>>();
     }
 
+    /**
+     * Forgets about all the data we already have.
+     */
     public void clear() {
         data.clear();
     }
@@ -24,9 +28,9 @@ public class IOMaybe {
             String string = scanner.next();
             Maybe<Integer> maybe;
             try {
-                maybe = new Maybe(Integer.parseInt(string));
-            } catch(NumberFormatException exception) {
-                maybe = new Maybe();
+                maybe = Maybe.just(Integer.parseInt(string));
+            } catch (NumberFormatException exception) {
+                maybe = Maybe.nothing();
             }
 
             data.add(maybe);

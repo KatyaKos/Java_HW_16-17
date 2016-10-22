@@ -8,26 +8,6 @@ public class BinTreeSet<T extends Comparable<T>> {
     private int size;
 
     /**
-     * Node of Binary Tree.
-     */
-    private class BinTreeNode {
-        private T value;
-        private BinTreeNode left;
-        private BinTreeNode right;
-
-        public BinTreeNode(T value) {
-            this.value = value;
-            left = null;
-            right = null;
-        }
-    }
-
-    public BinTreeSet() {
-        size = 0;
-        root = null;
-    }
-
-    /**
      * Returns size of the Set.
      */
     public int size() {
@@ -46,7 +26,7 @@ public class BinTreeSet<T extends Comparable<T>> {
             if (compare == 0) {
                 return true;
             } else if (compare > 0) {
-                if (temp.right != null ) {
+                if (temp.right != null) {
                     temp = temp.right;
                 } else {
                     return false;
@@ -96,6 +76,21 @@ public class BinTreeSet<T extends Comparable<T>> {
                     return false;
                 }
             }
+        }
+    }
+
+    /**
+     * Node of Binary Tree.
+     */
+    private class BinTreeNode {
+        private T value;
+        private BinTreeNode left;
+        private BinTreeNode right;
+
+        public BinTreeNode(T value) {
+            this.value = value;
+            left = null;
+            right = null;
         }
     }
 }

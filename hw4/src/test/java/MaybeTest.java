@@ -7,9 +7,9 @@ import static org.junit.Assert.*;
  * Created by KatyaKos on 09.10.2016.
  */
 public class MaybeTest {
-    Maybe<String> maybeTest0 = new Maybe();
-    Maybe<String> maybeTest1 = new Maybe("Trion");
-    Maybe<Integer> maybeTest2 = new Maybe(42);
+    private Maybe<String> maybeTest0 = Maybe.nothing();
+    private Maybe<String> maybeTest1 = Maybe.just("Trion");
+    private Maybe<Integer> maybeTest2 = Maybe.just(42);
 
     @Test
     public void justTest() throws Exception {
@@ -41,9 +41,9 @@ public class MaybeTest {
 
     @Test
     public void mapTest() throws Exception {
-        Maybe<Integer> maybeNull = new Maybe();
-        Maybe<String> maybeString = new Maybe("Trio");
-        Maybe<Integer> maybeInteger = new Maybe(21);
+        Maybe<Integer> maybeNull = Maybe.nothing();
+        Maybe<String> maybeString = Maybe.just("Trio");
+        Maybe<Integer> maybeInteger = Maybe.just(21);
         assertEquals(maybeTest0, maybeNull.map(x -> x.toString()));
         assertEquals(maybeTest1, maybeString.map(x -> x + 'n'));
         assertEquals(maybeTest2, maybeInteger.map(x -> x * 2));

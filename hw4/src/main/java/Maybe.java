@@ -10,18 +10,18 @@ import java.util.function.Function;
 public class Maybe<T> {
     private @Nullable T value;
 
-    public Maybe() {
+    private Maybe() {
         value = null;
     }
 
-    public Maybe(T value) {
+    private Maybe(T value) {
         this.value = value;
     }
 
     /**
      * Creates new Maybe container with an element inside.
      * @param element what we want to put
-     * @param <T> type
+     * @param <T> type of the element
      * @return new Maybe
      */
     public static <T> Maybe<T> just(T element) {
@@ -30,7 +30,7 @@ public class Maybe<T> {
 
     /**
      * Creates new empty Maybe container.
-     * @param <T> type
+     * @param <T> type of the element
      * @return new Maybe
      */
     public static <T> Maybe<T> nothing() {
